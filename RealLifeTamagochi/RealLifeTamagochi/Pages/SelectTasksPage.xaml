@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RealLifeTamagochi.TasksPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <ListView x:Name="lv_Tasks" SeparatorColor="Black" ItemsSource="{Binding}" ItemSelected="lv_Tasks_ItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.View>
+                                    <StackLayout Padding="10">
+                                        <StackLayout Orientation="Horizontal" BackgroundColor="#77E152">
+                                            <Label Text="Уборка"/>
+                                            <Label Text="+200 хр"/>
+                                            <CheckBox/>
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal" BackgroundColor="#77E152">
+                                            <Label Text="Уборка"/>
+                                            <Label Text="+200 хр"/>
+                                            <CheckBox/>
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal" BackgroundColor="#77E152">
+                                            <Label Text="Уборка"/>
+                                            <Label Text="+200 хр"/>
+                                            <CheckBox/>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </ViewCell.View>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

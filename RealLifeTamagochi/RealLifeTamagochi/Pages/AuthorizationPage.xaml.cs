@@ -17,14 +17,14 @@ namespace RealLifeTamagochi.Pages
             InitializeComponent();
         }
 
-        private void btn_login_Clicked(object sender, EventArgs e)
+        private async void btn_login_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new TasksPage());
         }
 
-        private void btn_registr_Clicked(object sender, EventArgs e)
+        private async void btn_registr_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new Pages.RegistrationPage());
         }
     }
 }

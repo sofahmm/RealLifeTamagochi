@@ -10,7 +10,7 @@ namespace RealLifeTamagochi
         {
             InitializeComponent();
 
-            MainPage = new Pages.AuthorizationPage();
+            MainPage = new NavigationPage(new Pages.AuthorizationPage());
         }
 
         protected override void OnStart()

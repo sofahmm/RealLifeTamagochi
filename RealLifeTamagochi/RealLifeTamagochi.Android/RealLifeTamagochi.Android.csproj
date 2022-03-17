@@ -88,7 +88,9 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\registr.png" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RealLifeTamagochi\RealLifeTamagochi.csproj">
       <Project>{6380E22A-0319-412B-8867-956164C06181}</Project>
