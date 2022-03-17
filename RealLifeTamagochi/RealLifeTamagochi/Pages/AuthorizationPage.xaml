@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RealLifeTamagochi.Pages.AuthorizationPage"
+             Visual="Material">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+                <Label Text="Авторизация"
+                   HorizontalTextAlignment="Center"
+                   TextColor="Black"
+                   Margin="0,50,0,0"/>
+                <Image Source="auth.png"
+                   WidthRequest="150"
+                   HeightRequest="150"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
+                <Entry Placeholder="Логин"
+                       FontSize="Medium"
+                       Margin="5"/>
+                <Entry IsPassword="True"
+                       Placeholder="Пароль"
+                       FontSize="Medium"
+                       Margin="5"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
+                <Button Text="Войти"
+                        x:Name="btn_login"
+                        Clicked="btn_login_Clicked"/>
+                <Button Text="Зарегистрироваться"
+                        x:Name="btn_registr"
+                        Clicked="btn_registr_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
