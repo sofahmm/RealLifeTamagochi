@@ -4,7 +4,14 @@
              x:Class="RealLifeTamagochi.Pages.TaskPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Задача" />
+            <StackLayout>
+                <Label Text="Задача" />    
+            </StackLayout>
+            <StackLayout>
+                <Entry/>
+                <Picker/>
+                <DatePicker/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
