@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RealLifeTamagochi.Pages.EditPage">
+    <ContentPage.Content>
+        <StackLayout Padding="15">
+            <StackLayout>
+                <Label Text="Задача" 
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       Margin="0, 0, 0,20"
+                       TextColor="Black"/>
+            </StackLayout>
+            <StackLayout>
+                <Editor Placeholder="Описание:"
+                        Margin="10"
+                        HeightRequest="200"
+                        BackgroundColor="White"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
+                <Label Text="&#xe742;"
+                       FontFamily="TamaFont"/>
+                <DatePicker BackgroundColor="White" 
+                            Format="D" 
+                            DateSelected="DatePicker_DateSelected"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
+                <Button Text="Сохранить"
+                        Margin="15"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -10,16 +10,16 @@ using Xamarin.Forms.Xaml;
 namespace RealLifeTamagochi.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class RegistrationPage : ContentPage
+    public partial class EditPage : ContentPage
     {
-        public RegistrationPage()
+        public EditPage()
         {
             InitializeComponent();
         }
 
-        private async void btn_ok_Clicked(object sender, EventArgs e)
+        private void DatePicker_DateSelected(object sender, DateChangedEventArgs e)
         {
-            await Navigation.PushAsync(new AuthorizationPage());
+
         }
     }
 }

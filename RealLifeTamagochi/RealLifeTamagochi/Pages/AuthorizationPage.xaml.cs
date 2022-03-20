@@ -14,6 +14,7 @@ namespace RealLifeTamagochi.Pages
     {
         public AuthorizationPage()
         {
+            
             InitializeComponent();
         }
 
@@ -24,7 +25,12 @@ namespace RealLifeTamagochi.Pages
 
         private async void btn_registr_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Pages.RegistrationPage());
+            await Navigation.PushAsync(new RegistrationPage());
+        }
+
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ForgotPasswordPAge());
         }
     }
 }

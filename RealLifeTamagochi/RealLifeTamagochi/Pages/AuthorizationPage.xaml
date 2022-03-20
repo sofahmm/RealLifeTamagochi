@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RealLifeTamagochi.Pages.AuthorizationPage"
-             Visual="Material">
+             Visual="Material"
+             NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <StackLayout>
             <StackLayout>
@@ -14,22 +15,37 @@
                    WidthRequest="150"
                    HeightRequest="150"/>
             </StackLayout>
+
             <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
                 <Entry Placeholder="Логин"
                        FontSize="Medium"
-                       Margin="5"/>
+                       Margin="10, 0, 10, 0"/>
                 <Entry IsPassword="True"
                        Placeholder="Пароль"
                        FontSize="Medium"
-                       Margin="5"/>
+                       Margin="10"/>
             </StackLayout>
+
+           
             <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
                 <Button Text="Войти"
                         x:Name="btn_login"
-                        Clicked="btn_login_Clicked"/>
+                        Clicked="btn_login_Clicked"
+                        Margin="10, 0, 10, 0"/>
                 <Button Text="Зарегистрироваться"
                         x:Name="btn_registr"
-                        Clicked="btn_registr_Clicked"/>
+                        Clicked="btn_registr_Clicked"
+                        Margin="10"/>
+                <Label Text="Забыли пароль?" 
+                       TextColor="SteelBlue"
+                       FontSize="16"
+                       Margin="10"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

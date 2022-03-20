@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace RealLifeTamagochi.Pages
+namespace RealLifeTamagochi
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class TaskPage : ContentPage
+    public partial class ForgotPasswordPAge : ContentPage
     {
-        public TaskPage()
+        public ForgotPasswordPAge()
         {
             InitializeComponent();
         }

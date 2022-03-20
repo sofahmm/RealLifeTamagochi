@@ -2,31 +2,33 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RealLifeTamagochi.Pages.RegistrationPage"
-             Visual="Material">
+             Visual="Material"
+             NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout>
+            <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="Center">
                 <Label Text="Регистрация"
                    HorizontalTextAlignment="Center"
                    TextColor="Black"
-                   Margin="0,50,0,0"/>
+                   Margin="0,40,40,0"/>
             </StackLayout>
-            <StackLayout Padding="10">
+            <StackLayout VerticalOptions="CenterAndExpand">
                 <Entry Placeholder="Имя"
                        FontSize="Medium"
-                       Margin="5"/>
+                       Margin="10"/>
                 <Entry Placeholder="Логин"
                        FontSize="Medium"
-                       Margin="5"/>
+                       Margin="10"/>
                 <Entry Placeholder="Пароль"
                        IsPassword="True"
                        FontSize="Medium"
-                       Margin="5"/>
+                       Margin="10"/>
             </StackLayout>
-            <StackLayout  Orientation="Vertical">
+            <StackLayout  Orientation="Vertical" VerticalOptions="EndAndExpand">
                 <Button Text="Зарегистрироваться"
                         x:Name="btn_ok"
-                        Clicked="btn_ok_Clicked"/>
+                        Clicked="btn_ok_Clicked"
+                        Margin="10"/>
                 <Image Source="registr" HeightRequest="150" WidthRequest="75"/>
             </StackLayout>
         </StackLayout>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RealLifeTamagochi.Pages.TaskPage"
+             Visual="Material"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout Padding="15">
+            <StackLayout>
+                <Label Text="Задача" 
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       Margin="0, 0, 0,20"
+                       TextColor="Black"/>
+            </StackLayout>
+            <StackLayout>
+                <Editor Placeholder="Описание:"
+                        Margin="10"
+                        HeightRequest="200"
+                        BackgroundColor="White"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
+                <Picker x:Name="pick_reward"
+                        SelectedIndexChanged="pick_reward_SelectedIndexChanged"
+                        Title="Награда:"
+                        BackgroundColor="White"
+                        Margin="10">
+                    <Picker.Items>
+                        <x:String>25 xp</x:String>
+                        <x:String>50xp</x:String>
+                        <x:String>75 xp</x:String>
+                        <x:String>100 xp</x:String>
+                        <x:String>125 xp</x:String>
+                        <x:String>150 xp</x:String>
+                        <x:String>175 xp</x:String>
+                        <x:String>200xp</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Label Text="&#xe8df;"
+                       FontFamily="TamaFont"/>
+                <DatePicker BackgroundColor="White" 
+                            Format="D" 
+                            DateSelected="DatePicker_DateSelected"
+                            />
+            </StackLayout>
+            <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
+                <Button Text="Сохранить"
+                        Margin="15"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

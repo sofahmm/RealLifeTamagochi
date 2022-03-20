@@ -1,9 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="RealLifeTamagochi.TasksPage">
+             x:Class="RealLifeTamagochi.TasksPage"
+             NavigationPage.HasBackButton="False">
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal" Margin="10">
+            <StackLayout HorizontalOptions="StartAndExpand">
+                <Label Text="&#xe853;"
+                       FontFamily="TamaFont"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="10">
+                <Label Text="&#xe145;"
+                       FontFamily="TamaFont"/>
+            </StackLayout>
+        </StackLayout>
+    </NavigationPage.TitleView>
     <ContentPage.Content>
-        <ScrollView>
+        <!--ScrollView>
             <StackLayout>
                 <ListView x:Name="lv_Tasks" SeparatorColor="Black" ItemsSource="{Binding}" ItemSelected="lv_Tasks_ItemSelected">
                     <ListView.ItemTemplate>
@@ -33,6 +46,27 @@
                     </ListView.ItemTemplate>
                 </ListView>
             </StackLayout>
-        </ScrollView>
+        </ScrollView>-->
+        
+        <StackLayout>
+            <ListView x:Name="lv_task"
+                      ItemsSource="{Binding Tasks}"
+                      SelectedItem="{Binding SelectedTask}"
+                      HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout>
+                                    <Label Text="{Binding Name}"/>
+                                    <Label Text="{Binding Reward}"/>
+                                    <CheckBox />
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
