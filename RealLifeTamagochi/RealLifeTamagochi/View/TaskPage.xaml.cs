@@ -20,13 +20,15 @@ namespace RealLifeTamagochi.Pages
             ViewModel = studentViewModel;
             this.BindingContext = ViewModel;
         }*/
-        public TaskViewModel TaskViewModel { get; private set; }
 
-        public TaskPage(TaskViewModel taskViewModel)
+
+        //public TaskViewModel TaskViewModel { get; private set; }
+
+        public TaskPage(/*TaskViewModel taskViewModel*/)
         {
             InitializeComponent();
-            ViewModel = taskViewModel;
-            this.BindingContext = ViewModel;
+            /*ViewModel = taskViewModel;
+            this.BindingContext = ViewModel;*/
         }
 
         private void pick_reward_SelectedIndexChanged(object sender, EventArgs e)

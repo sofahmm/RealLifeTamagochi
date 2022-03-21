@@ -36,9 +36,22 @@ namespace RealLifeTamagochi.ViewModel
                     TaskViewModel taskViewModel = value;
                     taskVm = null;
                     OnPropertyChanged("taskViewModel");
-                    Navigation.PushAsync(new TasksPage(taskViewModel));
+                    Navigation.PushAsync(new TasksPage());
                 }
             }
+        }
+        protected void OnPropertyChanged(string propName)
+        {
+            if (PropertyChanged != null)
+                PropertyChanged(this, new PropertyChangedEventArgs(propName));
+        }
+        private void AddTask()
+        {
+
+        }
+        private void Back()
+        {
+
         }
     }
 }
