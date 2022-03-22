@@ -10,23 +10,22 @@ using Xamarin.Forms.Xaml;
 namespace RealLifeTamagochi.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class CreateCharacterPage : ContentPage
+    public partial class SelectTaskPage : ContentPage
     {
-        public List<People> Peoples { get; set; } = new List<People>()
+        public List<Task> Tasks { get; set; } = new List<Task>()
         {
-            new People { Image = "fr"},
-            new People { Image = "gh"}
-
+            new Task{ Name = "Cleaning", Reward="+200xp"}
         };
-        public CreateCharacterPage()
+        public SelectTaskPage()
         {
             InitializeComponent();
             BindingContext = this;
         }
-
     }
-    public class People
+    public class Task
     {
-        public string Image { get; set; }
+        public string Name { get; set; }
+        public string Reward { get; set; }
+       // public CheckBox checkBox { get; set; }
     }
 }

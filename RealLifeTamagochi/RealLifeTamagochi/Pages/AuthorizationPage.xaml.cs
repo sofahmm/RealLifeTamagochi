@@ -20,7 +20,7 @@ namespace RealLifeTamagochi.Pages
 
         private async void btn_login_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new TasksPage());
+            await Navigation.PushAsync(new SelectTaskPage());
         }
 
         private async void btn_registr_Clicked(object sender, EventArgs e)

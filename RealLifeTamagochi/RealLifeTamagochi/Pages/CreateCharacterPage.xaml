@@ -4,42 +4,29 @@
              x:Class="RealLifeTamagochi.Pages.CreateCharacterPage">
     <ContentPage.Content>
         <StackLayout>
-           <!-- <CarouselView ItemsSource="{Binding}">
+            <CarouselView ItemsSource="{Binding Peoples}" x:Name="cv_people">
                 <CarouselView.ItemTemplate>
                     <DataTemplate>
                         <StackLayout>
                             <Frame HasShadow="True"
-                       BorderColor="DarkGray"
-                       CornerRadius="5"
-                       Margin="20"
-                       HeightRequest="300"
-                       HorizontalOptions="Center"
-                       VerticalOptions="CenterAndExpand">
+                           BorderColor="DarkGray"
+                           CornerRadius="5"
+                           Margin="20"
+                           HeightRequest="300"
+                           HorizontalOptions="Center"
+                           VerticalOptions="CenterAndExpand">
                                 <StackLayout>
-                                    <Label Text="vdfvdfvdf"
-                               FontAttributes="Bold"
-                               FontSize="Large"
-                               HorizontalOptions="Center"
-                               VerticalOptions="Center" />
-                                    <Image Source="auth"
+                                    <Image Source="{Binding Image}"
                                Aspect="AspectFill"
-                               HeightRequest="150"
-                               WidthRequest="150"
-                               HorizontalOptions="Center" />
-                                    <Label Text="zzzzzzzz"
-                               HorizontalOptions="Center" />
-                                    <Label Text="frfrfr"
-                               FontAttributes="Italic"
-                               HorizontalOptions="Center"
-                               MaxLines="5"
-                               LineBreakMode="TailTruncation" />
+                               HeightRequest="300"
+                               WidthRequest="300"
+                               HorizontalOptions="Center"/>
                                 </StackLayout>
                             </Frame>
                         </StackLayout>
                     </DataTemplate>
                 </CarouselView.ItemTemplate>
-            </CarouselView>-->
-           
+            </CarouselView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

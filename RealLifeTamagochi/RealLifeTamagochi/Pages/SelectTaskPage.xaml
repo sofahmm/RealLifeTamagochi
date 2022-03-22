@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RealLifeTamagochi.Pages.SelectTaskPage"
+             NavigationPage.HasBackButton="False">
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal" Margin="10">
+            <StackLayout HorizontalOptions="StartAndExpand">
+                <Label Text="&#xe853;"
+                       TextColor="Black"
+                       FontFamily="TamaFont"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="10">
+                <Label Text="&#xe145;"
+                       TextColor="Black"
+                       FontFamily="TamaFont"/>
+            </StackLayout>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="lv_task"
+                      ItemsSource="{Binding Tasks}"
+                      SelectedItem="{Binding SelectedTask}"
+                      HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout Orientation="Horizontal" BackgroundColor="#77E152">
+                                    <Label Text="{Binding Name}"
+                                           TextColor="Black"/>
+                                    <Label Text="{Binding Reward}"
+                                           TextColor="Black"/>
+                                    <CheckBox Color="Black" />
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

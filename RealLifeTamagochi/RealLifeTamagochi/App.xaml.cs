@@ -11,7 +11,7 @@ namespace RealLifeTamagochi
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new Pages.CreateCharacterPage()) {BarBackgroundColor = Color.FromRgb(248, 220, 165), BarTextColor = Color.Black };
+            MainPage = new NavigationPage(new Pages.AuthorizationPage()) {BarBackgroundColor = Color.FromRgb(248, 220, 165), BarTextColor = Color.Black };
         }
 
         protected override void OnStart()
