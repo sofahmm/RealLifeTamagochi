@@ -5,23 +5,25 @@
              NavigationPage.HasBackButton="False">
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal" Margin="10">
-            <StackLayout HorizontalOptions="StartAndExpand">
-                <Label Text="&#xe853;"
-                       TextColor="Black"
-                       FontFamily="TamaFont"/>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="10">
-                <Label Text="&#xe145;"
-                       TextColor="Black"
-                       FontFamily="TamaFont"/>
-            </StackLayout>
+            <Label Text="&#xe853;"
+                   TextColor="Black"
+                   HorizontalOptions="StartAndExpand"
+                   FontFamily="TamaFont"/>
+            <Label Text="&#xe145;"
+                   TextColor="Black"
+                   HorizontalOptions="EndAndExpand"
+                   FontFamily="TamaFont">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
         </StackLayout>
     </NavigationPage.TitleView>
     <ContentPage.Content>
         <StackLayout>
             <ListView x:Name="lv_task"
                       ItemsSource="{Binding Tasks}"
-                      SelectedItem="{Binding SelectedTask}"
+                      ItemSelected="lv_task_ItemSelected"
                       HasUnevenRows="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>

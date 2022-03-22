@@ -14,37 +14,70 @@
                        TextColor="Black"/>
             </StackLayout>
             <StackLayout>
-                <Editor Placeholder="Описание:"
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="&#xea67;"
+                       FontFamily="TamaFont"
+                       TextColor="Black"
+                       HorizontalOptions="Start"/>
+                    <Entry Placeholder="Название задачи:"
+                        Margin ="10"
+                        BackgroundColor="White"
+                           HorizontalOptions="End"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="&#xe253;"
+                       FontFamily="TamaFont"
+                       TextColor="Black"
+                           HorizontalOptions="Start"/>
+                    <Editor HeightRequest="75"
+                    Placeholder="Описание:"
                         Margin="10"
-                        HeightRequest="200"
-                        BackgroundColor="White"/>
+                        BackgroundColor="White"
+                            HorizontalOptions="End"/>
+                </StackLayout>
+                
             </StackLayout>
             <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
-                <Picker x:Name="pick_reward"
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="&#xea23;"
+                       FontFamily="TamaFont"
+                       TextColor="Black"
+                       HorizontalOptions="StartAndExpand"/>
+                    <Picker x:Name="pick_reward"
                         SelectedIndexChanged="pick_reward_SelectedIndexChanged"
                         Title="Награда:"
                         BackgroundColor="White"
-                        Margin="10">
-                    <Picker.Items>
-                        <x:String>25 xp</x:String>
-                        <x:String>50xp</x:String>
-                        <x:String>75 xp</x:String>
-                        <x:String>100 xp</x:String>
-                        <x:String>125 xp</x:String>
-                        <x:String>150 xp</x:String>
-                        <x:String>175 xp</x:String>
-                        <x:String>200xp</x:String>
-                    </Picker.Items>
-                </Picker>
-                <Label Text="&#xe8df;"
-                       FontFamily="TamaFont"/>
-                <DatePicker BackgroundColor="White" 
+                        Margin="10"
+                            HorizontalOptions="EndAndExpand">
+                        <Picker.Items>
+                            <x:String>25 xp</x:String>
+                            <x:String>50xp</x:String>
+                            <x:String>75 xp</x:String>
+                            <x:String>100 xp</x:String>
+                            <x:String>125 xp</x:String>
+                            <x:String>150 xp</x:String>
+                            <x:String>175 xp</x:String>
+                            <x:String>200xp</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="&#xe8df;"
+                       FontFamily="TamaFont"
+                       Margin="10,0,0,0"
+                           HorizontalOptions="StartAndExpand"/>
+                    <DatePicker BackgroundColor="White" 
                             Format="D" 
+                                HorizontalOptions="EndAndExpand"
                             DateSelected="DatePicker_DateSelected"
-                            />
+                            Margin="10,0,10,0"/>
+                </StackLayout>
             </StackLayout>
             <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
-                <Button Text="Сохранить"
+                <Button x:Name="btn_save"
+                        Clicked="btn_save_Clicked"
+                    Text="Сохранить"
                         Margin="15"/>
             </StackLayout>
         </StackLayout>

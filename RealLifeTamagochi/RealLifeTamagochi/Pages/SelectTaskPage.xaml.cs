@@ -21,6 +21,16 @@ namespace RealLifeTamagochi.Pages
             InitializeComponent();
             BindingContext = this;
         }
+
+        private async void lv_task_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            await Navigation.PushAsync(new EditPage());
+        }
+
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new TaskPage());
+        }
     }
     public class Task
     {

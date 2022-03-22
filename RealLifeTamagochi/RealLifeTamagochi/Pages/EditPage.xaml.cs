@@ -21,5 +21,10 @@ namespace RealLifeTamagochi.Pages
         {
 
         }
+
+        private async void btn_save_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SelectTaskPage());
+        }
     }
 }
