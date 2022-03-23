@@ -1,25 +1,29 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using RealLifeTamagochi.Model;
+using RealLifeTamagochi.View;
 
 namespace RealLifeTamagochi.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SelectTaskPage : ContentPage
     {
-        public List<Task> Tasks { get; set; } = new List<Task>()
-        {
-            new Task{ Name = "Cleaning", Reward="+200xp"}
-        };
+        public string[] tasks { get; set; }
         public SelectTaskPage()
         {
             InitializeComponent();
-            BindingContext = this;
+        }
+
+        protected override void OnAppearing()
+        {
+            lv_task.ItemsSource = App.TaskDB.GetTask();
+            base.OnAppearing();
         }
 
         private async void lv_task_ItemSelected(object sender, SelectedItemChangedEventArgs e)
@@ -37,10 +41,10 @@ namespace RealLifeTamagochi.Pages
             await Navigation.PushAsync(new ProfilPage());
         }
     }
-    public class Task
-    {
-        public string Name { get; set; }
-        public string Reward { get; set; }
-       // public CheckBox checkBox { get; set; }
-    }
+    //public class Task
+    //{
+    //    public string Name { get; set; }
+    //    public string Reward { get; set; }
+    //   // public CheckBox checkBox { get; set; }
+    //}
 }
