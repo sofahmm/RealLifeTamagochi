@@ -4,25 +4,20 @@
              x:Class="RealLifeTamagochi.Pages.CreateCharacterPage">
     <ContentPage.Content>
         <StackLayout>
+            <Button Text="Сохранить"
+                    x:Name="btn_Save"
+                    Clicked="btn_Save_Clicked"/>
             <CarouselView ItemsSource="{Binding Peoples}" x:Name="cv_people">
                 <CarouselView.ItemTemplate>
                     <DataTemplate>
                         <StackLayout>
-                            <Frame HasShadow="True"
-                           BorderColor="DarkGray"
-                           CornerRadius="5"
-                           Margin="20"
-                           HeightRequest="300"
-                           HorizontalOptions="Center"
-                           VerticalOptions="CenterAndExpand">
-                                <StackLayout>
-                                    <Image Source="{Binding Image}"
+                            <StackLayout>
+                                <Image Source="{Binding Image}"
                                Aspect="AspectFill"
-                               HeightRequest="300"
+                               HeightRequest="450"
                                WidthRequest="300"
                                HorizontalOptions="Center"/>
-                                </StackLayout>
-                            </Frame>
+                            </StackLayout>
                         </StackLayout>
                     </DataTemplate>
                 </CarouselView.ItemTemplate>

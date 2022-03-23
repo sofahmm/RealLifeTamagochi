@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RealLifeTamagochi.ProfilPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="4*"/>
+               
+            </Grid.RowDefinitions>
+            <ProgressBar Progress="0.1" x:Name="ggwp">
+                <ProgressBar.ScaleY>
+                    <OnPlatform  
+                        x:TypeArguments="x:Double" 
+                        Default="20"/>
+                </ProgressBar.ScaleY>
+            </ProgressBar>
+            <Image Source="profilPh" Grid.Row="1"/>
+            <Label Text="pen">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+        </Grid> 
+    </ContentPage.Content>
+</ContentPage>

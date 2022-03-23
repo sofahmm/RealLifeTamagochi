@@ -31,6 +31,11 @@ namespace RealLifeTamagochi.Pages
         {
             await Navigation.PushAsync(new TaskPage());
         }
+
+        private async void TapGestureRecognizer_Tapped_1(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ProfilPage());
+        }
     }
     public class Task
     {

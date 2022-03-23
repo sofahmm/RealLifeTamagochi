@@ -14,8 +14,10 @@ namespace RealLifeTamagochi.Pages
     {
         public List<People> Peoples { get; set; } = new List<People>()
         {
-            new People { Image = "fr"},
-            new People { Image = "gh"}
+            new People { Image = "first"},
+            new People { Image = "second"},
+            new People { Image = "third"},
+            new People { Image = "forth"}
 
         };
         public CreateCharacterPage()
@@ -24,6 +26,10 @@ namespace RealLifeTamagochi.Pages
             BindingContext = this;
         }
 
+        private void btn_Save_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
     public class People
     {

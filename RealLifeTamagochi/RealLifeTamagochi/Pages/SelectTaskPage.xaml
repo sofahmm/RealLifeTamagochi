@@ -8,7 +8,11 @@
             <Label Text="&#xe853;"
                    TextColor="Black"
                    HorizontalOptions="StartAndExpand"
-                   FontFamily="TamaFont"/>
+                   FontFamily="TamaFont">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                </Label.GestureRecognizers>
+            </Label>
             <Label Text="&#xe145;"
                    TextColor="Black"
                    HorizontalOptions="EndAndExpand"
@@ -24,6 +28,7 @@
             <ListView x:Name="lv_task"
                       ItemsSource="{Binding Tasks}"
                       ItemSelected="lv_task_ItemSelected"
+                      Margin="10"
                       HasUnevenRows="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -34,7 +39,8 @@
                                            TextColor="Black"/>
                                     <Label Text="{Binding Reward}"
                                            TextColor="Black"/>
-                                    <CheckBox Color="Black" />
+                                    <CheckBox Color="Black"
+                                              HorizontalOptions="EndAndExpand"/>
                                 </StackLayout>
                             </ViewCell.View>
                         </ViewCell>
